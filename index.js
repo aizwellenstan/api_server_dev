@@ -18,17 +18,17 @@ const hbs = require('hbs');
 
 const port = 3000
 
-const conn = mysql.createConnection({
-    host: 'localhost',
-    user: 'nadi',
-    password: 'Nadi1234;',
-    database: 'crud_db'
-});
+// const conn = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'nadi',
+//     password: 'Nadi1234;',
+//     database: 'crud_db'
+// });
 
-conn.connect((err) =>{
-    if(err) throw err;
-    console.log('Mysql Connected...');
-});
+// conn.connect((err) =>{
+//     if(err) throw err;
+//     console.log('Mysql Connected...');
+// });
 
 app.use(cors());
 app.use(bodyParser.json())
