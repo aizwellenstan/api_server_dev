@@ -8,13 +8,13 @@ const app = express()
 const path = require('path');
 const hbs = require('hbs');
 
-const middlewares = require('./auth/middlewares');
-const auth = require('./auth');
-const notes = require('./api/notes');
+// const middlewares = require('./auth/middlewares');
+// const auth = require('./auth');
+// const notes = require('./api/notes');
 
-app.use(volleyball);
+// app.use(volleyball);
 app.use(express.json());
-app.use(middlewares.checkTokenSetUser);
+// app.use(middlewares.checkTokenSetUser);
 
 const port = 3000
 
