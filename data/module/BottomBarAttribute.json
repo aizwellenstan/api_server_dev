@@ -3,7 +3,7 @@
     "BottomBarIcon": {
       "TypeName": "Water",
       "TypeIcon": "Water",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -11,7 +11,7 @@
     "BottomBarIcon": {
       "TypeName": "PowerFactor",
       "TypeIcon": "PowerFactor",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -19,7 +19,7 @@
     "BottomBarIcon": {
       "TypeName": "Charging",
       "TypeIcon": "Charging",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -27,7 +27,7 @@
     "BottomBarIcon": {
       "TypeName": "Battery",
       "TypeIcon": "Battery",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -35,7 +35,7 @@
     "BottomBarIcon": {
       "TypeName": "Current",
       "TypeIcon": "Current",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -43,7 +43,7 @@
     "BottomBarIcon": {
       "TypeName": "Discharging",
       "TypeIcon": "Discharging",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -51,7 +51,7 @@
     "BottomBarIcon": {
       "TypeName": "light_pressed",
       "TypeIcon": "light_pressed",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -59,7 +59,7 @@
     "BottomBarIcon": {
       "TypeName": "Humidity",
       "TypeIcon": "Humidity",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -67,7 +67,7 @@
     "BottomBarIcon": {
       "TypeName": "Power",
       "TypeIcon": "Power",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -75,7 +75,7 @@
     "BottomBarIcon": {
       "TypeName": "Pressure",
       "TypeIcon": "Pressure",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -83,7 +83,7 @@
     "BottomBarIcon": {
       "TypeName": "SOH",
       "TypeIcon": "SOH",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -91,7 +91,7 @@
     "BottomBarIcon": {
       "TypeName": "SOC",
       "TypeIcon": "SOC",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -99,7 +99,7 @@
     "BottomBarIcon": {
       "TypeName": "Status",
       "TypeIcon": "Status",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -107,7 +107,7 @@
     "BottomBarIcon": {
       "TypeName": "Temperature",
       "TypeIcon": "Temperature",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   },
@@ -115,7 +115,7 @@
     "BottomBarIcon": {
       "TypeName": "Voltmet",
       "TypeIcon": "Voltmet",
-      "Desciption": "",
+      "Description": "",
       "LastUpdateTime": ""
     }
   }

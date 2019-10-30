@@ -6,26 +6,27 @@
 </head>
 <body>
   <div class="container">
-    <h2>Product List</h2>
+    <h2>BottomBarAttribute</h2>
 		<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add New</button>
     <table class="table table-striped" id="mytable">
       <thead>
         <tr>
-          <th>Product ID</th>
-          <th>Product Name</th>
-          <th>Price</th>
-          <th>Action</th>
+          <th>TypeName</th>
+          <th>TypeIcon</th>
+          <th>Description</th>
+          <th>LastUpdateTime</th>
         </tr>
       </thead>
       <tbody>
          {{#each results}}
         <tr>
-          <td>{{ product_id }}</td>
-          <td>{{ product_name }}</td>
-          <td>{{ product_price }}</td>
+          <td>{{ TypeName }}</td>
+          <td>{{ TypeIcon }}</td>
+          <td>{{ Description }}</td>
+          <td>{{ LastUpdateTime }}</td>
           <td>
-            <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ product_id }}" data-product_name="{{ product_name }}" data-product_price="{{ product_price }}">Edit</a>
-            <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ product_id }}">Delete</a>
+            <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ id }}" data-name="{{ name }}" data-product_price="{{ value }}">Edit</a>
+            <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ id }}">Delete</a>
           </td>
         </tr>
         {{/each}}
@@ -34,23 +35,23 @@
   </div>
 
 	<!-- Add New Product Modal-->
-	  <form action="/save" method="post">
+	  <form action="/companyId/projectId/Module/buttombar/system/save" method="post">
         <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog" role="document">
            <div class="modal-content">
              <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">Add New Product</h5>
+               <h5 class="modal-title" id="exampleModalLabel">Add New Data</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
                </button>
              </div>
              <div class="modal-body">
                <div class="form-group">
-                   <input type="text" name="product_name" class="form-control" placeholder="Product Name" required>
+                   <input type="text" name="name" class="form-control" placeholder="Name" required>
                </div>
 
                <div class="form-group">
-                   <input type="text" name="product_price" class="form-control" placeholder="Price" required>
+                   <input type="text" name="value" class="form-control" placeholder="Value" required>
                </div>
              </div>
              <div class="modal-footer">
@@ -63,7 +64,7 @@
 	 </form>
 
 	 <!-- Edit Product Modal-->
-   <form action="/update" method="post">
+   <form action="/companyId/projectId/Module/buttombar/system/update" method="post">
        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -75,11 +76,11 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                  <input type="text" name="product_name" class="form-control product_name" placeholder="Product Name" required>
+                  <input type="text" name="name" class="form-control name" placeholder="Name" required>
               </div>
 
               <div class="form-group">
-                  <input type="text" name="product_price" class="form-control price" placeholder="Price" required>
+                  <input type="text" name="value" class="form-control price" placeholder="Value" required>
               </div>
             </div>
             <div class="modal-footer">
@@ -93,7 +94,7 @@
   </form>
 
 	 <!-- Delete Product Modal-->
- 	  <form id="add-row-form" action="/delete" method="post">
+ 	  <form id="add-row-form" action="/companyId/projectId/Module/buttombar/system/delete" method="post">
  	     <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
  	        <div class="modal-dialog">
  	           <div class="modal-content">
@@ -105,7 +106,7 @@
 												 <strong>Are You Sure To Delete This Data?</strong>
  	               </div>
  	               <div class="modal-footer">
-									 		<input type="hidden" name="product_id" class="form-control product_id2" required>
+									 		<input type="hidden" name="id" class="form-control product_id2" required>
  	                   	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
  	                  	<button type="submit" class="btn btn-success">Delete</button>
  	               </div>
@@ -113,6 +114,26 @@
  	        </div>
  	     </div>
  	 </form>
+    <div class="container">
+      <h2>Request Methods</h2>
+      <hr>
+      <li>
+        get &nbsp;&nbsp; /api/:companyId/:projectId/Module/buttombar/system/save
+        &nbsp;&nbsp; {req.body.name,req.body.value}  => Create
+      </li>
+      <li>
+        get &nbsp;&nbsp; /api/:companyId/:projectId/Module/buttombar/system  => Read
+        <a href="http://127.0.0.1:3000/companyId/projectId/Module/buttombar/system">Sample</a>
+      </li>
+      <li>
+        post &nbsp;&nbsp; /api/:companyId/:projectId/Module/buttombar/system/update
+        &nbsp;&nbsp; {req.body.name,req.body.value}  => Update
+      </li>
+      <li>
+        post &nbsp;&nbsp; /api//:companyId/:projectId/Module/buttombar/system/delete'
+        &nbsp;&nbsp; {req.body.id}  => Delete
+      </li>
+    </div>
 
 <script src="/assets/js/jquery-3.3.1.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
@@ -121,18 +142,18 @@
 			//showing data to modal for edit record
       $('#mytable').on('click','.edit',function(){
         var product_id = $(this).data('id');
-        var product_name = $(this).data('product_name');
+        var name = $(this).data('name');
         var product_price = $(this).data('product_price');
         $('#EditModal').modal('show');
-        $('.product_name').val(product_name);
+        $('.name').val(name);
         $('.price').val(product_price);
         $('.product_id').val(product_id);
       });
 			//showing modal for delete record
 			$('#mytable').on('click','.delete',function(){
-        var product_id = $(this).data('id');
+        var id = $(this).data('id');
         $('#DeleteModal').modal('show');
-        $('.product_id2').val(product_id);
+        $('.product_id2').val(id);
       });
 
     });

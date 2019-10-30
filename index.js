@@ -22,7 +22,7 @@ const conn = mysql.createConnection({
     host: 'localhost',
     user: 'nadi',
     password: 'Nadi1234;',
-    database: 'crud_db'
+    database: 'ocms_test'
 });
 
 conn.connect((err) =>{
@@ -88,36 +88,85 @@ app.get('/:companyId/:projectId', function(req, res) {
     });
 });
 
-app.get('/:companyId/:projectId/Module/buttombar/attribute',(req, res) => {
-  fs.readFile('./data/module/BottomBarAttribute.json', (err, json) => {
-    let obj = JSON.parse(json);
-    res.json(obj);
-  })
-})
+//--------------------buttombar_module--------------------------
+//http://127.0.0.1:3000/companyId/projectId/Module/bottombar/attribute
+//http://127.0.0.1:3000/companyId/projectId/Module/bottombar/device
+//http://127.0.0.1:3000/companyId/projectId/Module/bottombar/sensor
+//http://127.0.0.1:3000/companyId/projectId/Module/bottombar/system
+app.get('/:companyId/:projectId/Module/bottombar/:module',(req, res) => {
+  let barmodule = req.params.module
+  let sql = "SELECT * FROM bottombar_" + barmodule
+  let query = conn.query(sql, (err, results) => {
+    if(err) throw err;
+    res.json(results)
+  });
+});
 
-app.get('/:companyId/:projectId/Module/buttombar/device',(req, res) => {
+app.post('/:companyId/:projectId/Module/bottombar/attribute/update',(req, res) => {
+  let sql = 
+  "UPDATE bottombar_attribute SET TypeName='" +
+  req.body.TypeName + 
+  "', TypeIcon='" + 
+  req.body.TypeIcon + 
+  "', Description='" + 
+  req.body.Description + 
+  "' WHERE id=" + 
+  req.body.id;
+
+  let query = conn.query(sql, (err, results) => {
+    if(err) throw err;
+    // res.redirect(`/${req.params.companyId}/${req.params.projectId}/Module/bottombar/system/web`);
+    res.send('success')
+  });
+});
+//-----------------------end-------------------
+
+
+
+
+
+
+// app.get('/:companyId/:projectId/Module/bottombar/attribute',(req, res) => {
+//   fs.readFile('./data/module/BottomBarAttribute.json', (err, json) => {
+//     let obj = JSON.parse(json);
+//     res.json(obj);
+//   })
+// })
+
+app.get('/:companyId/:projectId/Module/bottombar/device',(req, res) => {
   fs.readFile('./data/module/BottomBarDevice.json', (err, json) => {
     let obj = JSON.parse(json);
     res.json(obj);
   })
 })
 
-app.get('/:companyId/:projectId/Module/buttombar/sensor',(req, res) => {
+app.get('/:companyId/:projectId/Module/bottombar/sensor',(req, res) => {
   fs.readFile('./data/module/BottomBarSensor.json', (err, json) => {
     let obj = JSON.parse(json);
     res.json(obj);
   })
 })
 
-app.get('/:companyId/:projectId/Module/buttombar/system',(req, res) => {
+app.get('/:companyId/:projectId/Module/bottombar/system',(req, res) => {
   fs.readFile('./data/module/BottomBarSystem.json', (err, json) => {
     let obj = JSON.parse(json);
     res.json(obj);
   })
 })
 
-app.get('/:companyId/:projectId/Module/buttombar/system/web',(req, res) => {
-    let sql = "SELECT * FROM buttombar_system";
+//--------bottombar_attribute-----------
+app.get('/:companyId/:projectId/Module/bottombar/attribute/web',(req, res) => {
+  let sql = "SELECT * FROM bottombar_attribute";
+  let query = conn.query(sql, (err, results) => {
+    if(err) throw err;
+    res.render('bottombar_attribute_view',{
+      results: results
+    });
+  });
+});
+
+app.get('/:companyId/:projectId/Module/bottombar/system/web',(req, res) => {
+    let sql = "SELECT * FROM bottombar_system";
     let query = conn.query(sql, (err, results) => {
       if(err) throw err;
       res.render('product_view',{
@@ -126,8 +175,8 @@ app.get('/:companyId/:projectId/Module/buttombar/system/web',(req, res) => {
     });
 });
 
-// app.get('/:companyId/:projectId/Module/buttombar/system',(req, res) => {
-//     let sql = "SELECT * FROM buttombar_system";
+// app.get('/:companyId/:projectId/Module/bottombar/system',(req, res) => {
+//     let sql = "SELECT * FROM bottombar_system";
 //     let query = conn.query(sql, (err, results) => {
 //       if(err) throw err;
 //       res.json(results)
@@ -135,30 +184,30 @@ app.get('/:companyId/:projectId/Module/buttombar/system/web',(req, res) => {
 //   });
   
   //route for insert data
-  app.post('/:companyId/:projectId/Module/buttombar/system/save',(req, res) => {
+  app.post('/:companyId/:projectId/Module/bottombar/system/save',(req, res) => {
     let data = {name: req.body.name, value: req.body.value};
-    let sql = "INSERT INTO buttombar_system SET ?";
+    let sql = "INSERT INTO bottombar_system SET ?";
     let query = conn.query(sql, data,(err, results) => {
       if(err) throw err;
-      res.redirect(`/${req.params.companyId}/${req.params.projectId}/Module/buttombar/system/web`);
+      res.redirect(`/${req.params.companyId}/${req.params.projectId}/Module/bottombar/system/web`);
     });
   });
   
   //route for update data
-  app.post('/:companyId/:projectId/Module/buttombar/system/update',(req, res) => {
-    let sql = "UPDATE buttombar_system SET name='"+req.body.name+"', value='"+req.body.value+"' WHERE id="+req.body.id;
+  app.post('/:companyId/:projectId/Module/bottombar/system/update',(req, res) => {
+    let sql = "UPDATE bottombar_system SET name='"+req.body.name+"', value='"+req.body.value+"' WHERE id="+req.body.id;
     let query = conn.query(sql, (err, results) => {
       if(err) throw err;
-      res.redirect(`/${req.params.companyId}/${req.params.projectId}/Module/buttombar/system/web`);
+      res.redirect(`/${req.params.companyId}/${req.params.projectId}/Module/bottombar/system/web`);
     });
   });
   
   //route for delete data
-  app.post('/:companyId/:projectId/Module/buttombar/system/delete',(req, res) => {
-    let sql = "DELETE FROM buttombar_system WHERE id="+req.body.product_id+"";
+  app.post('/:companyId/:projectId/Module/bottombar/system/delete',(req, res) => {
+    let sql = "DELETE FROM bottombar_system WHERE id="+req.body.id+"";
     let query = conn.query(sql, (err, results) => {
       if(err) throw err;
-        res.redirect(`/${req.params.companyId}/${req.params.projectId}/Module/buttombar/system/web`);
+        res.redirect(`/${req.params.companyId}/${req.params.projectId}/Module/bottombar/system/web`);
     });
   });
 
