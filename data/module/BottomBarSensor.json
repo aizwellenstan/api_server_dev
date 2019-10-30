@@ -1,0 +1,58 @@
+[
+  {
+    "BottomBarIcon": {
+      "TypeName": "Controller",
+      "TypeIcon": "ControllerIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Co",
+      "TypeIcon": "CoIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "GasMeter",
+      "TypeIcon": "GasMeterIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "PIR",
+      "TypeIcon": "PIRIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Smoke",
+      "TypeIcon": "SmokeIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Sensor01",
+      "TypeIcon": "Sensor01",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "WaterMeter",
+      "TypeIcon": "WaterMeter",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  }
+]

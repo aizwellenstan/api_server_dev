@@ -1,0 +1,107 @@
+[
+  {
+    "BottomBarIcon": {
+      "TypeName": "Fan",
+      "TypeIcon": "FanIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Motor",
+      "TypeIcon": "MotorIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Converter",
+      "TypeIcon": "ConverterIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Chiller01",
+      "TypeIcon": "Chiller01Icon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "ChillerMotor",
+      "TypeIcon": "ChillerMotorIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+	
+      "TypeName": "E-meter",
+      "TypeIcon": "E-meterIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Container",
+      "TypeIcon": "ContainerIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "VoltageMachine",
+      "TypeIcon": "VoltageMachineIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "CoolingTower",
+      "TypeIcon": "CoolingTowerIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "ChillerWater",
+      "TypeIcon": "ChillerWaterIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "PowerGenerator",
+      "TypeIcon": "PowerGeneratorIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Filter",
+      "TypeIcon": "FilterIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "WaterVolume",
+      "TypeIcon": "WaterVolumeIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "BottomBarIcon": {
+      "TypeName": "Water",
+      "TypeIcon": "Water",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "PowerFactor",
+      "TypeIcon": "PowerFactor",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Charging",
+      "TypeIcon": "Charging",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Battery",
+      "TypeIcon": "Battery",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Current",
+      "TypeIcon": "Current",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Discharging",
+      "TypeIcon": "Discharging",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "light_pressed",
+      "TypeIcon": "light_pressed",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Humidity",
+      "TypeIcon": "Humidity",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Power",
+      "TypeIcon": "Power",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Pressure",
+      "TypeIcon": "Pressure",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "SOH",
+      "TypeIcon": "SOH",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "SOC",
+      "TypeIcon": "SOC",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Status",
+      "TypeIcon": "Status",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Temperature",
+      "TypeIcon": "Temperature",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Voltmet",
+      "TypeIcon": "Voltmet",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  }
+]
+
+

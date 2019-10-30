@@ -1,0 +1,74 @@
+[
+  {
+    "BottomBarIcon": {
+      "TypeName": "Lighting",
+      "TypeIcon": "LightingIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Power",
+      "TypeIcon": "PowerIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "RenewableEnergy",
+      "TypeIcon": "RenewableEnergyIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Elevator",
+      "TypeIcon": "ElevatorIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "AirHandlingUnit",
+      "TypeIcon": "AirHandlingUnitIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Sanitary",
+      "TypeIcon": "SanitaryIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "ParkingManagement ",
+      "TypeIcon": "ParkingManagementIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Security",
+      "TypeIcon": "SecurityIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  },
+  {
+    "BottomBarIcon": {
+      "TypeName": "Personal",
+      "TypeIcon": "PersonalIcon",
+      "Desciption": "",
+      "LastUpdateTime": ""
+    }
+  }
+]
